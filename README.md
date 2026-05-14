@@ -1,5 +1,10 @@
 # Output Language Effect on AI-Assisted Software Engineering
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Pilot Study](https://img.shields.io/badge/study-pilot%20N%3D3-blue.svg)](analysis/reports/comparison-report-v2.md)
+[![Model](https://img.shields.io/badge/model-claude--opus--4.7-purple.svg)](https://www.anthropic.com/claude)
+[![Replications welcome](https://img.shields.io/badge/replications-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 A pilot study measuring how Claude's **output language choice** (English vs Japanese)
 affects QCD (Quality, Cost, Delivery) when building the same specified software.
 
