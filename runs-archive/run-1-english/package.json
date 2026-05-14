@@ -1,0 +1,12 @@
+{
+  "name": "scientific-calculator-run1",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}

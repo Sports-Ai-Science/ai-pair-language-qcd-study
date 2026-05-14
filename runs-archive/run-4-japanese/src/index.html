@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scientific Calculator</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main id="app">
+  <div id="display" aria-live="polite">0</div>
+  <div id="status">
+    <span>memory: <span id="memory-value">0</span></span>
+    <span class="modes">
+      <button id="mode-deg" data-key="DEG">DEG</button>
+      <button id="mode-rad" data-key="RAD" class="active">RAD</button>
+    </span>
+  </div>
+  <div id="keypad">
+    <button class="fn" data-key="sin">sin</button>
+    <button class="fn" data-key="cos">cos</button>
+    <button class="fn" data-key="tan">tan</button>
+    <button class="fn" data-key="log">log</button>
+    <button class="fn" data-key="ln">ln</button>
+    <button class="fn" data-key="exp">exp</button>
+
+    <button class="fn" data-key="asin">asin</button>
+    <button class="fn" data-key="acos">acos</button>
+    <button class="fn" data-key="atan">atan</button>
+    <button class="fn" data-key="√">√</button>
+    <button class="fn" data-key="x²">x²</button>
+    <button class="fn" data-key="x^y">x^y</button>
+
+    <button data-key="7">7</button>
+    <button data-key="8">8</button>
+    <button data-key="9">9</button>
+    <button class="op" data-key="/">÷</button>
+    <button class="fn" data-key="π">π</button>
+    <button class="fn" data-key="e">e</button>
+
+    <button data-key="4">4</button>
+    <button data-key="5">5</button>
+    <button data-key="6">6</button>
+    <button class="op" data-key="*">×</button>
+    <button class="fn" data-key="(">(</button>
+    <button class="fn" data-key=")">)</button>
+
+    <button data-key="1">1</button>
+    <button data-key="2">2</button>
+    <button data-key="3">3</button>
+    <button class="op" data-key="-">−</button>
+    <button class="fn" data-key="M+">M+</button>
+    <button class="fn" data-key="M-">M-</button>
+
+    <button data-key="0">0</button>
+    <button data-key=".">.</button>
+    <button class="op" data-key="=">=</button>
+    <button class="op" data-key="+">+</button>
+    <button class="fn" data-key="MR">MR</button>
+    <button class="fn" data-key="MC">MC</button>
+
+    <button class="fn" data-key="C">C</button>
+    <button class="fn" data-key="←">←</button>
+  </div>
+  <section id="history-section">
+    <h3>history</h3>
+    <ul id="history"></ul>
+  </section>
+</main>
+<!-- Classic scripts, file:// compatible (ES modules are blocked by CORS from file://) -->
+<script src="./engine.js"></script>
+<script src="./state.js"></script>
+<script src="./ui.js"></script>
+</body>
+</html>

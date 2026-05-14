@@ -1,0 +1,7 @@
+Total simple cycles: 5
+
+Loop   1 (B, len=2): load_decay -> cognitive_load -> load_decay
+Loop   2 (B, len=2): effective_communication -> shared_understanding -> effective_communication
+Loop   3 (R, len=2): shared_understanding -> correction_count -> shared_understanding
+Loop   4 (B, len=2): latent_defects -> defect_discovery -> latent_defects
+Loop   5 (B, len=3): fatigue -> load_decay -> cognitive_load -> fatigue

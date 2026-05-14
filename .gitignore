@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+model/language_experiment.py
+analysis/reports/*.png
+analysis/reports/*.json
+.DS_Store
+.claude/worktrees/

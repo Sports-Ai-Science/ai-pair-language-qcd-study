@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmile version="1.0" xmlns="http://docs.oasis-open.org/xmile/ns/XMILE/v1.0">
+  <header>
+    <name>Output Language Experiment SD Model</name>
+    <vendor>SportsAIScience</vendor>
+    <product version="1.0">PySD</product>
+    <version>0.2.0</version>
+    <doc>Captures cognitive load, fatigue, shared understanding, defect lifecycle,
+      and 4-class intervention dynamics under two output-language regimes.
+      Calibration: alpha_token_eff measured via tiktoken cl100k_base.
+      Purpose: pre-experiment hypothesis generation for a 10-Phase study.</doc>
+  </header>
+  <sim_specs time_units="minutes" method="euler">
+    <start>0</start>
+    <stop>300</stop>
+    <dt>1</dt>
+  </sim_specs>
+  <model>
+    <variables>
+
+      <!-- ===== Exogenous parameters ===== -->
+      <aux name="alpha_token_eff">
+        <doc>Tokens per character. English 0.188, Japanese 1.047 (tiktoken cl100k_base, measured 2026-05-12).</doc>
+        <eqn>0.188</eqn>
+        <units>tokens/char</units>
+      </aux>
+      <aux name="rs_prose">
+        <doc>User read speed for prose [chars/min]. English 200, Japanese 600 for JP-native (estimated).</doc>
+        <eqn>200</eqn>
+        <units>char/min</units>
+      </aux>
+      <aux name="rs_code">
+        <doc>User read speed for code [chars/min]. Language-independent ~400.</doc>
+        <eqn>400</eqn>
+        <units>char/min</units>
+      </aux>
+      <aux name="alpha_write_prose">
+        <doc>Claude write quality for prose [unitless 0-1]. English 0.9 for JP audience, Japanese 1.0.</doc>
+        <eqn>0.9</eqn>
+        <units>dmnl</units>
+      </aux>
+      <aux name="alpha_write_code">
+        <doc>Claude write quality for code. English 1.0, Japanese 0.95.</doc>
+        <eqn>1.0</eqn>
+        <units>dmnl</units>
+      </aux>
+
+      <aux name="output_rate">
+        <doc>Output generation rate during active phase [chars/min]. Overridden by phase orchestrator.</doc>
+        <eqn>100</eqn>
+        <units>char/min</units>
+      </aux>
+      <aux name="content_complexity">
+        <doc>Phase content complexity 0-1.</doc>
+        <eqn>0.6</eqn>
+        <units>dmnl</units>
+      </aux>
+
+      <!-- Decay/recovery -->
+      <aux name="load_decay_rate"><eqn>0.15</eqn><units>1/min</units></aux>
+      <aux name="fatigue_accumulation_rate"><eqn>0.05</eqn><units>1/min</units></aux>
+      <aux name="understanding_decay_rate"><eqn>0.02</eqn><units>1/min</units></aux>
+      <aux name="defect_intro_coef"><eqn>0.003</eqn><units>defects/char</units></aux>
+      <aux name="defect_discovery_coef"><eqn>0.05</eqn><units>1/min</units></aux>
+
+      <!-- Intervention base rates per type -->
+      <aux name="base_clarification_rate">
+        <doc>Baseline rate of "what does this mean?" questions per minute.</doc>
+        <eqn>0.05</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="base_correction_rate">
+        <doc>Baseline rate of "no, that's wrong" interventions per minute.</doc>
+        <eqn>0.04</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="base_redirect_rate">
+        <doc>Baseline rate of "start over with different approach" interventions per minute.</doc>
+        <eqn>0.02</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="base_approval_rate">
+        <doc>Baseline rate of explicit OK / approve actions per minute.</doc>
+        <eqn>0.03</eqn>
+        <units>1/min</units>
+      </aux>
+
+      <!-- ===== Information flows ===== -->
+      <aux name="read_burden_rate">
+        <doc>Cognitive load increase per minute from reading output.</doc>
+        <eqn>output_rate / rs_prose * content_complexity * 10</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="effective_communication">
+        <doc>Drives shared understanding. Saturates as U approaches 100 (Limits-to-Growth archetype).</doc>
+        <eqn>output_rate * alpha_write_prose * 0.1 * MAX(0, 1 - shared_understanding/100)</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="fatigue_suppression">
+        <doc>B2 archetype: high fatigue raises intervention threshold and suppresses intervention generation.
+             Range 0..1, 1 = no suppression, approaching 0 as fatigue → 100.</doc>
+        <eqn>MAX(0.3, 1 - fatigue/100 * 0.4)</eqn>
+        <units>dmnl</units>
+      </aux>
+      <aux name="defect_intro_rate">
+        <eqn>output_rate * content_complexity * (1 - shared_understanding/100) * defect_intro_coef</eqn>
+        <units>defects/min</units>
+      </aux>
+      <aux name="defect_discovery_rate">
+        <eqn>latent_defects * defect_discovery_coef * (shared_understanding/100) * (1 - fatigue/100)</eqn>
+        <units>defects/min</units>
+      </aux>
+
+      <!-- Intervention generation rates (per type) -->
+      <aux name="clarification_gen_rate">
+        <doc>Increases with read burden (comprehension difficulty).</doc>
+        <eqn>base_clarification_rate * (1 + read_burden_rate * 2) * fatigue_suppression</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="correction_gen_rate">
+        <doc>Increases when shared understanding is low (quality misalignment).</doc>
+        <eqn>base_correction_rate * (1 + (1 - shared_understanding/100) * 2) * fatigue_suppression</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="redirect_gen_rate">
+        <doc>Increases with cognitive load (wrong-direction drift).</doc>
+        <eqn>base_redirect_rate * (1 + cognitive_load/100 * 3) * fatigue_suppression</eqn>
+        <units>1/min</units>
+      </aux>
+      <aux name="approval_gen_rate">
+        <doc>Increases with shared understanding (productive flow).</doc>
+        <eqn>base_approval_rate * shared_understanding/50 * fatigue_suppression</eqn>
+        <units>1/min</units>
+      </aux>
+
+      <!-- ===== Stocks ===== -->
+      <stock name="cognitive_load">
+        <doc>User cognitive load [0..100].</doc>
+        <eqn>20</eqn>
+        <inflow>read_burden_rate</inflow>
+        <outflow>load_decay</outflow>
+        <units>dmnl</units>
+      </stock>
+      <flow name="load_decay">
+        <eqn>load_decay_rate * cognitive_load * (1 + fatigue/200)</eqn>
+        <units>1/min</units>
+      </flow>
+
+      <stock name="fatigue">
+        <doc>User fatigue [0..100].</doc>
+        <eqn>10</eqn>
+        <inflow>fatigue_gain</inflow>
+        <units>dmnl</units>
+      </stock>
+      <flow name="fatigue_gain">
+        <eqn>fatigue_accumulation_rate * (1 + cognitive_load/100) * MAX(0, 1 - fatigue/100)</eqn>
+        <units>1/min</units>
+      </flow>
+
+      <stock name="shared_understanding">
+        <doc>Shared mental model between user and Claude [0..100].</doc>
+        <eqn>50</eqn>
+        <inflow>understanding_gain</inflow>
+        <outflow>understanding_loss</outflow>
+        <units>dmnl</units>
+      </stock>
+      <flow name="understanding_gain">
+        <eqn>effective_communication</eqn>
+        <units>1/min</units>
+      </flow>
+      <flow name="understanding_loss">
+        <eqn>understanding_decay_rate * shared_understanding + correction_gen_rate * 5</eqn>
+        <units>1/min</units>
+      </flow>
+
+      <stock name="cumulative_tokens">
+        <eqn>0</eqn>
+        <inflow>token_rate</inflow>
+        <units>tokens</units>
+      </stock>
+      <flow name="token_rate">
+        <eqn>output_rate * alpha_token_eff</eqn>
+        <units>tokens/min</units>
+      </flow>
+
+      <stock name="latent_defects">
+        <eqn>0</eqn>
+        <inflow>defect_intro_rate</inflow>
+        <outflow>defect_discovery_rate</outflow>
+        <units>defects</units>
+      </stock>
+
+      <stock name="known_defects">
+        <eqn>0</eqn>
+        <inflow>defect_discovery_rate</inflow>
+        <units>defects</units>
+      </stock>
+
+      <stock name="clarification_count">
+        <eqn>0</eqn>
+        <inflow>clarification_gen_rate</inflow>
+        <units>dmnl</units>
+      </stock>
+      <stock name="correction_count">
+        <eqn>0</eqn>
+        <inflow>correction_gen_rate</inflow>
+        <units>dmnl</units>
+      </stock>
+      <stock name="redirect_count">
+        <eqn>0</eqn>
+        <inflow>redirect_gen_rate</inflow>
+        <units>dmnl</units>
+      </stock>
+      <stock name="approval_count">
+        <eqn>0</eqn>
+        <inflow>approval_gen_rate</inflow>
+        <units>dmnl</units>
+      </stock>
+
+    </variables>
+  </model>
+</xmile>

@@ -1,0 +1,5 @@
+id,position,lang,ac_pass,ac_total,sc_failure_count,interventions_total,test_pass_rate
+run-1-english,1,english,10,10,0,0,1.0
+run-2-japanese,2,japanese,10,10,0,0,1.0
+run-3-english,3,english,10,10,0,0,1.0
+run-4-japanese,4,japanese,10,10,0,0,1.0
