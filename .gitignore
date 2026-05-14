@@ -1,9 +1,20 @@
+# Python
 .venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Node
+node_modules/
+package-lock.json
+
+# Generated artifacts (PySD auto-translates XMILE)
 model/language_experiment.py
-analysis/reports/*.png
-analysis/reports/*.json
+
+# OS
 .DS_Store
+
+# Worktrees
 .claude/worktrees/
+
+# We KEEP analysis/reports/*.json and *.png — they are the experiment results.

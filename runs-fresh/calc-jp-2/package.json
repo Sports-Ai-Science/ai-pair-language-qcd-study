@@ -1,0 +1,9 @@
+{
+  "name": "calc-jp-2",
+  "version": "1.0.0",
+  "description": "関数電卓 (Vanilla JS, file:// 動作)",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/engine.test.mjs tests/state.test.mjs tests/integration.test.mjs"
+  }
+}

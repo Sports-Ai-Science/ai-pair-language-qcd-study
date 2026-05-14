@@ -1,0 +1,138 @@
+{
+  "final_cognitive_load": {
+    "S1": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.3268247651819669,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.49579724905147293,
+      "fatigue_accumulation_rate": 0.0016544148327375678,
+      "defect_intro_coef": 0.0
+    },
+    "ST": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.507303066577509,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.5856494702931837,
+      "fatigue_accumulation_rate": 0.0021909828991820176,
+      "defect_intro_coef": 0.0
+    },
+    "S1_conf": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.12836115166482437,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.13678211850992578,
+      "fatigue_accumulation_rate": 0.006747747707849385,
+      "defect_intro_coef": 0.0
+    },
+    "ST_conf": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.1285280650389146,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.1402186545989308,
+      "fatigue_accumulation_rate": 0.0007115191619379689,
+      "defect_intro_coef": 0.0
+    }
+  },
+  "total_tokens": {
+    "S1": {
+      "alpha_token_eff": 0.9999992878878188,
+      "rs_prose": 0.0,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.0,
+      "fatigue_accumulation_rate": 0.0,
+      "defect_intro_coef": 0.0
+    },
+    "ST": {
+      "alpha_token_eff": 0.9999992878874776,
+      "rs_prose": 0.0,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.0,
+      "fatigue_accumulation_rate": 0.0,
+      "defect_intro_coef": 0.0
+    },
+    "S1_conf": {
+      "alpha_token_eff": 0.15590873692191765,
+      "rs_prose": 0.0,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.0,
+      "fatigue_accumulation_rate": 0.0,
+      "defect_intro_coef": 0.0
+    },
+    "ST_conf": {
+      "alpha_token_eff": 0.13398630165111486,
+      "rs_prose": 0.0,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.0,
+      "fatigue_accumulation_rate": 0.0,
+      "defect_intro_coef": 0.0
+    }
+  },
+  "discovered_defects": {
+    "S1": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.0003081996869425404,
+      "alpha_write_prose": 0.01087394990574478,
+      "load_decay_rate": -8.541216042253663e-05,
+      "fatigue_accumulation_rate": 0.000472284695007787,
+      "defect_intro_coef": 0.9878769044317887
+    },
+    "ST": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 6.861164897522349e-06,
+      "alpha_write_prose": 0.013305759349629126,
+      "load_decay_rate": 9.250389479289096e-06,
+      "fatigue_accumulation_rate": 0.0003416188496634852,
+      "defect_intro_coef": 0.9890297247881131
+    },
+    "S1_conf": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.0005196716133956147,
+      "alpha_write_prose": 0.018967059799523317,
+      "load_decay_rate": 0.0006425395332115094,
+      "fatigue_accumulation_rate": 0.0035295729868317703,
+      "defect_intro_coef": 0.1335359304688524
+    },
+    "ST_conf": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 3.0306812366046318e-06,
+      "alpha_write_prose": 0.003119192505503452,
+      "load_decay_rate": 3.87739267256045e-06,
+      "fatigue_accumulation_rate": 8.129529818571718e-05,
+      "defect_intro_coef": 0.11048790954840945
+    }
+  },
+  "final_fatigue": {
+    "S1": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.01709441214017923,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.01989562342819588,
+      "fatigue_accumulation_rate": 0.965431332955061,
+      "defect_intro_coef": 0.0
+    },
+    "ST": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.016559093336179196,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.019025317069088808,
+      "fatigue_accumulation_rate": 0.9784373553193667,
+      "defect_intro_coef": 0.0
+    },
+    "S1_conf": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.022452068124131926,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.024645394092652144,
+      "fatigue_accumulation_rate": 0.13820779344785608,
+      "defect_intro_coef": 0.0
+    },
+    "ST_conf": {
+      "alpha_token_eff": 0.0,
+      "rs_prose": 0.005054830775903667,
+      "alpha_write_prose": 0.0,
+      "load_decay_rate": 0.005716587390855705,
+      "fatigue_accumulation_rate": 0.1208248749964698,
+      "defect_intro_coef": 0.0
+    }
+  }
+}

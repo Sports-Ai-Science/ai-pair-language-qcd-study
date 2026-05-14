@@ -1,0 +1,318 @@
+{
+  "design_note": "Welch's t-test + Mann-Whitney U + Cliff's delta + Cohen's d + bootstrap CI + power",
+  "n_per_group": 3,
+  "alpha": 0.05,
+  "metrics": {
+    "active_min": {
+      "metric": "active_min",
+      "en_values": [
+        12.8,
+        11.7,
+        10.4
+      ],
+      "jp_values": [
+        14.8,
+        13.7,
+        14.1
+      ],
+      "en_mean": 11.633333333333333,
+      "jp_mean": 14.200000000000001,
+      "diff_jp_minus_en": 2.566666666666668,
+      "en_std": 1.2013880860626736,
+      "jp_std": 0.5567764362830029,
+      "welch_t": -3.3573595455164953,
+      "welch_p_two_sided": 0.04799349274959685,
+      "mannwhitney_u": 0.0,
+      "mannwhitney_p": 0.1,
+      "cliffs_delta": 1.0,
+      "cliffs_magnitude": "large",
+      "cohens_d": 2.741,
+      "required_n_per_group_80power": 4,
+      "bootstrap_ci95_diff": [
+        1.4,
+        3.8
+      ],
+      "ci_excludes_zero": true
+    },
+    "phase_sum_min": {
+      "metric": "phase_sum_min",
+      "en_values": [
+        10.4,
+        9.3,
+        7.8
+      ],
+      "jp_values": [
+        9.9,
+        10.6,
+        11.9
+      ],
+      "en_mean": 9.166666666666668,
+      "jp_mean": 10.799999999999999,
+      "diff_jp_minus_en": 1.633333333333331,
+      "en_std": 1.3051181300301264,
+      "jp_std": 1.014889156509222,
+      "welch_t": -1.711154224635464,
+      "welch_p_two_sided": 0.1665479701628264,
+      "mannwhitney_u": 1.0,
+      "mannwhitney_p": 0.2,
+      "cliffs_delta": 0.778,
+      "cliffs_magnitude": "large",
+      "cohens_d": 1.397,
+      "required_n_per_group_80power": 10,
+      "bootstrap_ci95_diff": [
+        0.1,
+        3.167
+      ],
+      "ci_excludes_zero": true
+    },
+    "tokens_total": {
+      "metric": "tokens_total",
+      "en_values": [
+        102491.0,
+        71880.0,
+        72448.0
+      ],
+      "jp_values": [
+        100960.0,
+        113058.0,
+        138625.0
+      ],
+      "en_mean": 82273.0,
+      "jp_mean": 117547.66666666667,
+      "diff_jp_minus_en": 35274.66666666667,
+      "en_std": 17511.604695172857,
+      "jp_std": 19229.687629634896,
+      "welch_t": -2.3491449174559027,
+      "welch_p_two_sided": 0.07915648612169644,
+      "mannwhitney_u": 1.0,
+      "mannwhitney_p": 0.2,
+      "cliffs_delta": 0.778,
+      "cliffs_magnitude": "large",
+      "cohens_d": 1.918,
+      "required_n_per_group_80power": 6,
+      "bootstrap_ci95_diff": [
+        12516.0,
+        58033.333
+      ],
+      "ci_excludes_zero": true
+    },
+    "tests_passed": {
+      "metric": "tests_passed",
+      "en_values": [
+        31.0,
+        53.0,
+        44.0
+      ],
+      "jp_values": [
+        49.0,
+        77.0,
+        34.0
+      ],
+      "en_mean": 42.666666666666664,
+      "jp_mean": 53.333333333333336,
+      "diff_jp_minus_en": 10.666666666666671,
+      "en_std": 11.060440015358038,
+      "jp_std": 21.82506204649447,
+      "welch_t": -0.7550866850928143,
+      "welch_p_two_sided": 0.5056823987549433,
+      "mannwhitney_u": 3.0,
+      "mannwhitney_p": 0.7,
+      "cliffs_delta": 0.333,
+      "cliffs_magnitude": "medium",
+      "cohens_d": 0.617,
+      "required_n_per_group_80power": 43,
+      "bootstrap_ci95_diff": [
+        -11.0,
+        33.0
+      ],
+      "ci_excludes_zero": false
+    },
+    "src_loc": {
+      "metric": "src_loc",
+      "en_values": [
+        508.0,
+        697.0,
+        602.0
+      ],
+      "jp_values": [
+        530.0,
+        508.0,
+        423.0
+      ],
+      "en_mean": 602.3333333333334,
+      "jp_mean": 487.0,
+      "diff_jp_minus_en": -115.33333333333337,
+      "en_std": 94.50044091607897,
+      "jp_std": 56.50663677834667,
+      "welch_t": 1.8142805647296343,
+      "welch_p_two_sided": 0.15968061858636742,
+      "mannwhitney_u": 7.5,
+      "mannwhitney_p": 0.26828588367711736,
+      "cliffs_delta": -0.667,
+      "cliffs_magnitude": "large",
+      "cohens_d": -1.481,
+      "required_n_per_group_80power": 9,
+      "bootstrap_ci95_diff": [
+        -214.0,
+        -16.667
+      ],
+      "ci_excludes_zero": true
+    },
+    "js_lines": {
+      "metric": "js_lines",
+      "en_values": [
+        452.0,
+        517.0,
+        471.0
+      ],
+      "jp_values": [
+        449.0,
+        379.0,
+        358.0
+      ],
+      "en_mean": 480.0,
+      "jp_mean": 395.3333333333333,
+      "diff_jp_minus_en": -84.66666666666669,
+      "en_std": 33.421549934136806,
+      "jp_std": 47.648014998878324,
+      "welch_t": 2.519672646598079,
+      "welch_p_two_sided": 0.0725719629582479,
+      "mannwhitney_u": 9.0,
+      "mannwhitney_p": 0.1,
+      "cliffs_delta": -1.0,
+      "cliffs_magnitude": "large",
+      "cohens_d": -2.057,
+      "required_n_per_group_80power": 5,
+      "bootstrap_ci95_diff": [
+        -136.667,
+        -31.0
+      ],
+      "ci_excludes_zero": true
+    },
+    "comment_lines": {
+      "metric": "comment_lines",
+      "en_values": [
+        18.0,
+        16.0,
+        6.0
+      ],
+      "jp_values": [
+        24.0,
+        20.0,
+        19.0
+      ],
+      "en_mean": 13.333333333333334,
+      "jp_mean": 21.0,
+      "diff_jp_minus_en": 7.666666666666666,
+      "en_std": 6.429100507328636,
+      "jp_std": 2.6457513110645907,
+      "welch_t": -1.9100460366360195,
+      "welch_p_two_sided": 0.16381626473809677,
+      "mannwhitney_u": 0.0,
+      "mannwhitney_p": 0.1,
+      "cliffs_delta": 1.0,
+      "cliffs_magnitude": "large",
+      "cohens_d": 1.56,
+      "required_n_per_group_80power": 8,
+      "bootstrap_ci95_diff": [
+        2.0,
+        14.667
+      ],
+      "ci_excludes_zero": true
+    },
+    "bugs": {
+      "metric": "bugs",
+      "en_values": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "jp_values": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "en_mean": 1.0,
+      "jp_mean": 0.0,
+      "diff_jp_minus_en": -1.0,
+      "en_std": 0.0,
+      "jp_std": 0.0,
+      "welch_t": "n/a (zero variance)",
+      "welch_p_two_sided": "n/a",
+      "mannwhitney_u": 9.0,
+      "mannwhitney_p": 0.04685417760387377,
+      "cliffs_delta": -1.0,
+      "cliffs_magnitude": "large",
+      "cohens_d": "n/a (zero pooled SD)",
+      "required_n_per_group_80power": "n/a",
+      "bootstrap_ci95_diff": [
+        -1.0,
+        -1.0
+      ],
+      "ci_excludes_zero": true
+    },
+    "docs_bytes": {
+      "metric": "docs_bytes",
+      "en_values": [
+        30294.0,
+        19828.0,
+        16422.0
+      ],
+      "jp_values": [
+        25084.0,
+        25998.0,
+        37010.0
+      ],
+      "en_mean": 22181.333333333332,
+      "jp_mean": 29364.0,
+      "diff_jp_minus_en": 7182.666666666668,
+      "en_std": 7229.227436824307,
+      "jp_std": 6637.381712693643,
+      "welch_t": -1.2676397407000528,
+      "welch_p_two_sided": 0.2741577929940323,
+      "mannwhitney_u": 2.0,
+      "mannwhitney_p": 0.4,
+      "cliffs_delta": 0.556,
+      "cliffs_magnitude": "large",
+      "cohens_d": 1.035,
+      "required_n_per_group_80power": 16,
+      "bootstrap_ci95_diff": [
+        -1416.667,
+        15782.0
+      ],
+      "ci_excludes_zero": false
+    },
+    "src_bytes": {
+      "metric": "src_bytes",
+      "en_values": [
+        19009.0,
+        21904.0,
+        18309.0
+      ],
+      "jp_values": [
+        16880.0,
+        19519.0,
+        15407.0
+      ],
+      "en_mean": 19740.666666666668,
+      "jp_mean": 17268.666666666668,
+      "diff_jp_minus_en": -2472.0,
+      "en_std": 1905.9140414334884,
+      "jp_std": 2083.370426336453,
+      "welch_t": 1.5163512991917492,
+      "welch_p_two_sided": 0.204570091154793,
+      "mannwhitney_u": 7.0,
+      "mannwhitney_p": 0.4,
+      "cliffs_delta": -0.556,
+      "cliffs_magnitude": "large",
+      "cohens_d": -1.238,
+      "required_n_per_group_80power": 12,
+      "bootstrap_ci95_diff": [
+        -5041.0,
+        97.0
+      ],
+      "ci_excludes_zero": false
+    }
+  },
+  "bonferroni_alpha": 0.005555555555555556
+}

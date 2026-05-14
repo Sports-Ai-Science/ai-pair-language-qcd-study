@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="bar">
+      <h1>Scientific Calculator</h1>
+      <div class="status">
+        <button id="mode-deg" data-action="mode" data-value="DEG" class="mode-btn">DEG</button>
+        <button id="mode-rad" data-action="mode" data-value="RAD" class="mode-btn">RAD</button>
+        <span class="mode-label">Mode: <span id="mode">RAD</span></span>
+        <span class="mem-label">Memory: <span id="memory-indicator"></span></span>
+      </div>
+    </header>
+
+    <section class="screen">
+      <div id="display" aria-live="polite">0</div>
+    </section>
+
+    <section id="keys" class="keys">
+      <button data-action="clear">AC</button>
+      <button data-action="back">DEL</button>
+      <button data-action="paren" data-value="(">(</button>
+      <button data-action="paren" data-value=")">)</button>
+
+      <button data-action="fn" data-value="sin">sin</button>
+      <button data-action="fn" data-value="cos">cos</button>
+      <button data-action="fn" data-value="tan">tan</button>
+      <button data-action="op"  data-value="/">&divide;</button>
+
+      <button data-action="fn" data-value="asin">asin</button>
+      <button data-action="fn" data-value="acos">acos</button>
+      <button data-action="fn" data-value="atan">atan</button>
+      <button data-action="op"  data-value="*">&times;</button>
+
+      <button data-action="fn" data-value="log">log</button>
+      <button data-action="fn" data-value="ln">ln</button>
+      <button data-action="fn" data-value="exp">exp</button>
+      <button data-action="op"  data-value="-">&minus;</button>
+
+      <button data-action="fn" data-value="sqrt">&radic;</button>
+      <button data-action="square">x&sup2;</button>
+      <button data-action="op" data-value="^">x^y</button>
+      <button data-action="op" data-value="+">+</button>
+
+      <button data-action="const" data-value="pi">&pi;</button>
+      <button data-action="const" data-value="e">e</button>
+      <button data-action="digit" data-value="7">7</button>
+      <button data-action="digit" data-value="8">8</button>
+
+      <button data-action="digit" data-value="9">9</button>
+      <button data-action="mplus">M+</button>
+      <button data-action="mminus">M-</button>
+      <button data-action="mrecall">MR</button>
+
+      <button data-action="digit" data-value="4">4</button>
+      <button data-action="digit" data-value="5">5</button>
+      <button data-action="digit" data-value="6">6</button>
+      <button data-action="mclear">MC</button>
+
+      <button data-action="digit" data-value="1">1</button>
+      <button data-action="digit" data-value="2">2</button>
+      <button data-action="digit" data-value="3">3</button>
+      <button data-action="equals" class="eq">=</button>
+
+      <button data-action="digit" data-value="0" class="wide">0</button>
+      <button data-action="dot">.</button>
+    </section>
+
+    <section class="history-wrap">
+      <h2>History</h2>
+      <ol id="history" reversed></ol>
+    </section>
+  </main>
+
+  <!-- Classic scripts only. ES modules are blocked under file:// due to CORS. -->
+  <script src="engine.js"></script>
+  <script src="state.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>

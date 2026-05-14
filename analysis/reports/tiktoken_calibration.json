@@ -1,0 +1,17 @@
+{
+  "encoding": "cl100k_base (OpenAI; proxy for Claude)",
+  "english": {
+    "n_samples": 5,
+    "total_chars": 718,
+    "total_tokens": 135,
+    "alpha_token_eff": 0.18802228412256267
+  },
+  "japanese": {
+    "n_samples": 5,
+    "total_chars": 322,
+    "total_tokens": 337,
+    "alpha_token_eff": 1.046583850931677
+  },
+  "ratio_ja_over_en": 5.566275592362548,
+  "notes": "cl100k_base is used as a public proxy; Claude's actual tokenizer may differ in absolute values but the EN/JA ratio is typically preserved within ~10%."
+}

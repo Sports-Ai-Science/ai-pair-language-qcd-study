@@ -1,0 +1,55 @@
+{
+  "design": "ABAB 4-run, single-session execution",
+  "caveat": "N=4 with broken L2 isolation; results are descriptive, not inferential.",
+  "encoding": {
+    "language": "English=+1, Japanese=-1",
+    "position": "early(1,2)=+1, late(3,4)=-1"
+  },
+  "metrics": {
+    "active_min": {
+      "grand_mean": 57.25,
+      "language_effect": 15.75,
+      "position_effect": 34.25,
+      "interaction": 10.75,
+      "language_share": 0.27510917030567683,
+      "position_share": 0.5982532751091703,
+      "interaction_share": 0.18777292576419213,
+      "values_by_run": {
+        "1": 118,
+        "2": 65,
+        "3": 28,
+        "4": 18
+      }
+    },
+    "est_tokens": {
+      "grand_mean": 37500.0,
+      "language_effect": -25500.0,
+      "position_effect": -3500.0,
+      "interaction": 3500.0,
+      "language_share": 0.68,
+      "position_share": 0.09333333333333334,
+      "interaction_share": 0.09333333333333334,
+      "values_by_run": {
+        "1": 12000,
+        "2": 56000,
+        "3": 12000,
+        "4": 70000
+      }
+    },
+    "in_run_bugs": {
+      "grand_mean": 0.5,
+      "language_effect": 0.5,
+      "position_effect": 0.5,
+      "interaction": 0.5,
+      "language_share": 1.0,
+      "position_share": 1.0,
+      "interaction_share": 1.0,
+      "values_by_run": {
+        "1": 2,
+        "2": 0,
+        "3": 0,
+        "4": 0
+      }
+    }
+  }
+}

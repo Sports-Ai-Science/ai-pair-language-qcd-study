@@ -1,0 +1,115 @@
+{
+  "design": "parallel 2-group, N=3 each, single-session orchestrator with isolated sub-agents",
+  "n_english": 3,
+  "n_japanese": 3,
+  "metrics": {
+    "total_active_min": {
+      "label": "Wall-clock active time (min)",
+      "english_values": [
+        10.366666666666667,
+        9.333333333333334,
+        7.833333333333333
+      ],
+      "japanese_values": [
+        9.933333333333334,
+        10.566666666666666,
+        11.883333333333333
+      ],
+      "n": 6,
+      "mean_english": 9.177777777777779,
+      "mean_japanese": 10.794444444444444,
+      "diff_jp_minus_en": 1.6166666666666654,
+      "ratio_jp_over_en": 1.176150121065375,
+      "ss_between": 3.9204166666666604,
+      "ss_within": 5.22425925925926,
+      "df_between": 1,
+      "df_within": 4,
+      "F": 3.0017014639679505,
+      "eta_squared": 0.4287102898367291,
+      "p_approx": ">0.10",
+      "within_variance_en": 1.6225925925925937,
+      "within_variance_jp": 0.9895370370370364
+    },
+    "docs_bytes": {
+      "label": "Documentation bytes",
+      "english_values": [
+        30294.0,
+        19828.0,
+        16422.0
+      ],
+      "japanese_values": [
+        25084.0,
+        25998.0,
+        37010.0
+      ],
+      "n": 6,
+      "mean_english": 22181.333333333332,
+      "mean_japanese": 29364.0,
+      "diff_jp_minus_en": 7182.666666666668,
+      "ratio_jp_over_en": 1.323815821110844,
+      "ss_between": 77386050.66666669,
+      "ss_within": 192633130.66666666,
+      "df_between": 1,
+      "df_within": 4,
+      "F": 1.6069105122020968,
+      "eta_squared": 0.28659464221963965,
+      "p_approx": ">0.10",
+      "within_variance_en": 52261729.33333333,
+      "within_variance_jp": 44054836.0
+    },
+    "src_bytes": {
+      "label": "Source code bytes",
+      "english_values": [
+        19009.0,
+        21904.0,
+        18309.0
+      ],
+      "japanese_values": [
+        16880.0,
+        19519.0,
+        15407.0
+      ],
+      "n": 6,
+      "mean_english": 19740.666666666668,
+      "mean_japanese": 17268.666666666668,
+      "diff_jp_minus_en": -2472.0,
+      "ratio_jp_over_en": 0.8747762655769815,
+      "ss_between": 9166176.0,
+      "ss_within": 15945881.333333332,
+      "df_between": 1,
+      "df_within": 4,
+      "F": 2.2993212625605057,
+      "eta_squared": 0.3650109538350316,
+      "p_approx": ">0.10",
+      "within_variance_en": 3632508.333333333,
+      "within_variance_jp": 4340432.333333333
+    },
+    "phases_with_timestamps": {
+      "label": "Phases completed",
+      "english_values": [
+        9.0,
+        9.0,
+        9.0
+      ],
+      "japanese_values": [
+        9.0,
+        9.0,
+        9.0
+      ],
+      "n": 6,
+      "mean_english": 9.0,
+      "mean_japanese": 9.0,
+      "diff_jp_minus_en": 0.0,
+      "ratio_jp_over_en": 1.0,
+      "ss_between": 0.0,
+      "ss_within": 0.0,
+      "df_between": 1,
+      "df_within": 4,
+      "F": Infinity,
+      "eta_squared": 0.0,
+      "p_approx": "n/a",
+      "within_variance_en": 0.0,
+      "within_variance_jp": 0.0
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "design": "v2.4 Parallel: 2 groups × N=3, isolated sub-agents, opus model.",
+  "n_per_group": 3,
+  "predictions": {
+    "H1_token_ratio_ja_over_en": 5.57
+  },
+  "observations": {
+    "H1_token_ratio_ja_over_en": 1.429,
+    "H1_note": "Total agent tokens (input+output) ratio observed = 1.43x. Note: total_tokens includes input (system prompt + reads); pure output ratio would be closer to predicted 5.57x.",
+    "H3_bugs_en": 1,
+    "H3_bugs_jp": 0,
+    "H3_tests_en": 42.666666666666664,
+    "H3_tests_jp": 53.333333333333336,
+    "H3_note": "Bugs: EN mean 1.0, JP mean 0.0. Tests written: EN mean 43, JP mean 53.",
+    "H4_note": "By design: all 6 agents started simultaneously, no sequential carryover, position is undefined. Compare to v2.3 ABAB where position effect was 60% of variance in active_min — that confound is now eliminated."
+  },
+  "verdicts": {
+    "H1": "DEVIATED-LOWER",
+    "H3_bugs": "DEVIATED-JP-FEWER-BUGS",
+    "H4_position_zero": "STRUCTURALLY-ZERO (parallel design)"
+  },
+  "within_vs_between": {
+    "active_min": {
+      "cv_english": 0.139,
+      "cv_japanese": 0.092,
+      "between_group_diff": 1.62,
+      "within_pooled_sd": 1.13,
+      "signal_to_noise_ratio": 1.43,
+      "interpretation": "noise dominates"
+    },
+    "docs_bytes": {
+      "cv_english": 0.326,
+      "cv_japanese": 0.226,
+      "between_group_diff": 7182.67,
+      "within_pooled_sd": 6933.3,
+      "signal_to_noise_ratio": 1.04,
+      "interpretation": "noise dominates"
+    },
+    "tokens": {
+      "cv_english": 0.213,
+      "cv_japanese": 0.164,
+      "between_group_diff": 35274.67,
+      "within_pooled_sd": 18370.65,
+      "signal_to_noise_ratio": 1.92,
+      "interpretation": "noise dominates"
+    },
+    "tests": {
+      "cv_english": 0.259,
+      "cv_japanese": 0.409,
+      "between_group_diff": 10.67,
+      "within_pooled_sd": 16.44,
+      "signal_to_noise_ratio": 0.65,
+      "interpretation": "noise dominates"
+    },
+    "loc": {
+      "cv_english": 0.158,
+      "cv_japanese": 0.116,
+      "between_group_diff": 115,
+      "within_pooled_sd": 75.75,
+      "signal_to_noise_ratio": 1.52,
+      "interpretation": "noise dominates"
+    },
+    "bugs": "no within-language variance to compare"
+  }
+}

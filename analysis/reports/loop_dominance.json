@@ -1,0 +1,139 @@
+{
+  "baseline": {
+    "cognitive_load": 17.8262223643509,
+    "fatigue": 24.653540191606847,
+    "shared_understanding": 79.50315605101714,
+    "cumulative_tokens": 5640.000000000031,
+    "clarification_count": 97.63600313285346,
+    "correction_count": 15.961687211758438,
+    "known_defects": 10.39733363312243
+  },
+  "loops": {
+    "R1_cognitive_load_spiral": {
+      "description": "Read burden -> cognitive_load -> intervention drift -> rework. Break by removing read burden contribution.",
+      "delta_pct": {
+        "cognitive_load": -100.0,
+        "fatigue": -8.376981683610031,
+        "shared_understanding": -0.026828511999306876,
+        "cumulative_tokens": 0.0,
+        "clarification_count": -85.64815680687599,
+        "correction_count": 0.471789132396997,
+        "known_defects": -100.0
+      },
+      "broken_final_state": {
+        "cognitive_load": 1.660444054860986e-22,
+        "fatigue": 22.588317645394504,
+        "shared_understanding": 79.48182653725617,
+        "cumulative_tokens": 5640.000000000031,
+        "clarification_count": 14.012566069660776,
+        "correction_count": 16.036992717370715,
+        "known_defects": 0.0
+      }
+    },
+    "R2_shared_understanding": {
+      "description": "Effective communication -> understanding -> approvals. Break by zeroing write quality.",
+      "delta_pct": {
+        "cognitive_load": 0.0,
+        "fatigue": 0.0,
+        "shared_understanding": -141.34256324611135,
+        "cumulative_tokens": 0.0,
+        "clarification_count": 0.0,
+        "correction_count": 133.3516276782701,
+        "known_defects": -3179.606708249605
+      },
+      "broken_final_state": {
+        "cognitive_load": 17.8262223643509,
+        "fatigue": 24.653540191606847,
+        "shared_understanding": -32.86864257304639,
+        "cumulative_tokens": 5640.000000000031,
+        "clarification_count": 97.63600313285346,
+        "correction_count": 37.2468569135526,
+        "known_defects": -320.1969840447307
+      }
+    },
+    "B1_load_decay": {
+      "description": "Cognitive load self-regulating via decay. Break by setting decay rate to zero.",
+      "delta_pct": {
+        "cognitive_load": 5060.936407030507,
+        "fatigue": 150.24642048388543,
+        "shared_understanding": 0.4722197743680301,
+        "cumulative_tokens": 0.0,
+        "clarification_count": -6.298210316600443,
+        "correction_count": -6.388121790029419,
+        "known_defects": -7.522917412446761
+      },
+      "broken_final_state": {
+        "cognitive_load": 920.0,
+        "fatigue": 61.69460185205217,
+        "shared_understanding": 79.87858567513672,
+        "cumulative_tokens": 5640.000000000031,
+        "clarification_count": 91.48668231082375,
+        "correction_count": 14.942035192927758,
+        "known_defects": 9.61515081080608
+      }
+    },
+    "B2_fatigue_suppression": {
+      "description": "Fatigue raises intervention threshold (suppressed generation). Break by minimizing fatigue accumulation.",
+      "delta_pct": {
+        "cognitive_load": 6.85168544576624,
+        "fatigue": -59.43787414594338,
+        "shared_understanding": -0.19022442730253392,
+        "cumulative_tokens": 0.0,
+        "clarification_count": 3.240604659779985,
+        "correction_count": 3.3077487399914514,
+        "known_defects": 2.0146906809043306
+      },
+      "broken_final_state": {
+        "cognitive_load": 19.047619047619058,
+        "fatigue": 10.0,
+        "shared_understanding": 79.35192162773166,
+        "cumulative_tokens": 5640.000000000031,
+        "clarification_count": 100.79999999999964,
+        "correction_count": 16.489659719386754,
+        "known_defects": 10.60680774489148
+      }
+    },
+    "B3_defect_lifecycle": {
+      "description": "Latent defects discovered when understanding is high. Break by zeroing discovery coefficient.",
+      "delta_pct": {
+        "cognitive_load": 0.0,
+        "fatigue": 0.0,
+        "shared_understanding": 0.0,
+        "cumulative_tokens": 0.0,
+        "clarification_count": 0.0,
+        "correction_count": 0.0,
+        "known_defects": -100.0
+      },
+      "broken_final_state": {
+        "cognitive_load": 17.8262223643509,
+        "fatigue": 24.653540191606847,
+        "shared_understanding": 79.50315605101714,
+        "cumulative_tokens": 5640.000000000031,
+        "clarification_count": 97.63600313285346,
+        "correction_count": 15.961687211758438,
+        "known_defects": 0.0
+      }
+    },
+    "B4_understanding_decay": {
+      "description": "Shared understanding decays with time. Break by zeroing decay rate.",
+      "delta_pct": {
+        "cognitive_load": 0.0,
+        "fatigue": 0.0,
+        "shared_understanding": 23.15024492347048,
+        "cumulative_tokens": 0.0,
+        "clarification_count": 0.0,
+        "correction_count": -24.409307672293348,
+        "known_defects": -80.1520701502216
+      },
+      "broken_final_state": {
+        "cognitive_load": 17.8262223643509,
+        "fatigue": 24.653540191606847,
+        "shared_understanding": 97.90833139871656,
+        "cumulative_tokens": 5640.000000000031,
+        "clarification_count": 97.63600313285346,
+        "correction_count": 12.06554987055122,
+        "known_defects": 2.063655485749554
+      }
+    }
+  }
+}

@@ -1,0 +1,616 @@
+{
+  "english": {
+    "final": {
+      "cognitive_load": 15.873594970306081,
+      "fatigue": 21.23648468945767,
+      "shared_understanding": 77.71081542695927,
+      "cumulative_tokens": 4549.599999999984,
+      "latent_defects": 1.0318779641861395,
+      "known_defects": 8.09713421630532,
+      "clarification_count": 58.55614935153772,
+      "correction_count": 12.427058764646569,
+      "redirect_count": 6.187105020448437,
+      "approval_count": 10.49226247452613
+    },
+    "per_phase": {
+      "01": {
+        "name": "Req",
+        "duration_min": 15,
+        "elapsed_at_exit_min": 15,
+        "delta": {
+          "cognitive_load": 2.585647520426953,
+          "fatigue": 0.8181354417060778,
+          "shared_understanding": 21.52148277131616,
+          "cumulative_tokens": 253.80000000000013,
+          "latent_defects": 0.9659699953586608,
+          "known_defects": 0.24327993112571733,
+          "clarification_count": 5.894627468733481,
+          "correction_count": 1.0044296100814132,
+          "redirect_count": 0.47492067026070944,
+          "approval_count": 0.5406204075267771
+        },
+        "end_state": {
+          "cognitive_load": 22.585647520426953,
+          "fatigue": 10.818135441706078,
+          "shared_understanding": 71.52148277131616,
+          "cumulative_tokens": 253.80000000000013,
+          "latent_defects": 0.9659699953586608,
+          "known_defects": 0.24327993112571733,
+          "clarification_count": 5.894627468733481,
+          "correction_count": 1.0044296100814132,
+          "redirect_count": 0.47492067026070944,
+          "approval_count": 0.5406204075267771
+        }
+      },
+      "02": {
+        "name": "ADR",
+        "duration_min": 15,
+        "elapsed_at_exit_min": 30,
+        "delta": {
+          "cognitive_load": -17.384402340686005,
+          "fatigue": 0.7402983109064358,
+          "shared_understanding": -0.1963642907764438,
+          "cumulative_tokens": 169.1999999999996,
+          "latent_defects": -0.12130847127099198,
+          "known_defects": 0.43008312894922107,
+          "clarification_count": 1.5762543831380995,
+          "correction_count": 0.9009319176714969,
+          "redirect_count": 0.3821588565098522,
+          "approval_count": 0.613963738859366
+        },
+        "end_state": {
+          "cognitive_load": 5.2012451797409485,
+          "fatigue": 11.558433752612514,
+          "shared_understanding": 71.32511848053971,
+          "cumulative_tokens": 422.9999999999997,
+          "latent_defects": 0.8446615240876688,
+          "known_defects": 0.6733630600749384,
+          "clarification_count": 7.470881851871581,
+          "correction_count": 1.9053615277529101,
+          "redirect_count": 0.8570795267705617,
+          "approval_count": 1.154584146386143
+        }
+      },
+      "03": {
+        "name": "Design",
+        "duration_min": 30,
+        "elapsed_at_exit_min": 60,
+        "delta": {
+          "cognitive_load": 22.86229170665003,
+          "fatigue": 1.6232935717887376,
+          "shared_understanding": 7.778176646104825,
+          "cumulative_tokens": 563.9999999999989,
+          "latent_defects": 0.6085720936099704,
+          "known_defects": 1.2596840027344638,
+          "clarification_count": 14.260450428685179,
+          "correction_count": 1.6671921224744277,
+          "redirect_count": 0.9717286449413202,
+          "approval_count": 1.3164869853075127
+        },
+        "end_state": {
+          "cognitive_load": 28.063536886390978,
+          "fatigue": 13.181727324401251,
+          "shared_understanding": 79.10329512664454,
+          "cumulative_tokens": 986.9999999999986,
+          "latent_defects": 1.4532336176976393,
+          "known_defects": 1.9330470628094023,
+          "clarification_count": 21.73133228055676,
+          "correction_count": 3.572553650227338,
+          "redirect_count": 1.8288081717118818,
+          "approval_count": 2.4710711316936558
+        }
+      },
+      "03a": {
+        "name": "Annot",
+        "duration_min": 10,
+        "elapsed_at_exit_min": 70,
+        "delta": {
+          "cognitive_load": -12.85131499828535,
+          "fatigue": 0.5217778454617825,
+          "shared_understanding": -2.3633884634101605,
+          "cumulative_tokens": 150.39999999999964,
+          "latent_defects": -0.1921054990754818,
+          "known_defects": 0.45776479145830873,
+          "clarification_count": 2.3657844813025015,
+          "correction_count": 0.546120175885382,
+          "redirect_count": 0.30582249796504013,
+          "approval_count": 0.44209228135486534
+        },
+        "end_state": {
+          "cognitive_load": 15.212221888105628,
+          "fatigue": 13.703505169863034,
+          "shared_understanding": 76.73990666323438,
+          "cumulative_tokens": 1137.3999999999983,
+          "latent_defects": 1.2611281186221575,
+          "known_defects": 2.390811854267711,
+          "clarification_count": 24.09711676185926,
+          "correction_count": 4.11867382611272,
+          "redirect_count": 2.134630669676922,
+          "approval_count": 2.913163413048521
+        }
+      },
+      "04": {
+        "name": "Impl",
+        "duration_min": 60,
+        "elapsed_at_exit_min": 130,
+        "delta": {
+          "cognitive_load": -4.114268522031335,
+          "fatigue": 2.8417635435568354,
+          "shared_understanding": 7.208438425122068,
+          "cumulative_tokens": 1353.5999999999967,
+          "latent_defects": -0.22817971177844587,
+          "known_defects": 2.4237267737412047,
+          "clarification_count": 12.96575085660487,
+          "correction_count": 3.0191075626409978,
+          "redirect_count": 1.5193544942033843,
+          "approval_count": 2.8092240110385425
+        },
+        "end_state": {
+          "cognitive_load": 11.097953366074293,
+          "fatigue": 16.54526871341987,
+          "shared_understanding": 83.94834508835645,
+          "cumulative_tokens": 2490.999999999995,
+          "latent_defects": 1.0329484068437116,
+          "known_defects": 4.814538628008916,
+          "clarification_count": 37.06286761846413,
+          "correction_count": 7.137781388753718,
+          "redirect_count": 3.6539851638803063,
+          "approval_count": 5.722387424087064
+        }
+      },
+      "05": {
+        "name": "Unit",
+        "duration_min": 30,
+        "elapsed_at_exit_min": 160,
+        "delta": {
+          "cognitive_load": -4.337317852081641,
+          "fatigue": 1.3370217809586933,
+          "shared_understanding": -1.2366633252753587,
+          "cumulative_tokens": 620.3999999999951,
+          "latent_defects": -0.24412097580428338,
+          "known_defects": 0.9168007197175569,
+          "clarification_count": 4.4698213275931025,
+          "correction_count": 1.4970851966801533,
+          "redirect_count": 0.6868485600316125,
+          "approval_count": 1.3914605992609994
+        },
+        "end_state": {
+          "cognitive_load": 6.760635513992652,
+          "fatigue": 17.882290494378562,
+          "shared_understanding": 82.71168176308109,
+          "cumulative_tokens": 3111.39999999999,
+          "latent_defects": 0.7888274310394282,
+          "known_defects": 5.731339347726473,
+          "clarification_count": 41.532688946057235,
+          "correction_count": 8.63486658543387,
+          "redirect_count": 4.340833723911919,
+          "approval_count": 7.113848023348063
+        }
+      },
+      "06": {
+        "name": "Integ",
+        "duration_min": 20,
+        "elapsed_at_exit_min": 180,
+        "delta": {
+          "cognitive_load": 3.2142550409087924,
+          "fatigue": 0.8912367067863443,
+          "shared_understanding": -0.013086215567923887,
+          "cumulative_tokens": 413.5999999999967,
+          "latent_defects": 0.11221575082395652,
+          "known_defects": 0.5728126532280875,
+          "clarification_count": 3.9851635639229315,
+          "correction_count": 0.9979397205646663,
+          "redirect_count": 0.47185250698534187,
+          "approval_count": 0.9197532130791215
+        },
+        "end_state": {
+          "cognitive_load": 9.974890554901444,
+          "fatigue": 18.773527201164907,
+          "shared_understanding": 82.69859554751316,
+          "cumulative_tokens": 3524.999999999987,
+          "latent_defects": 0.9010431818633847,
+          "known_defects": 6.30415200095456,
+          "clarification_count": 45.517852509980166,
+          "correction_count": 9.632806305998537,
+          "redirect_count": 4.812686230897261,
+          "approval_count": 8.033601236427184
+        }
+      },
+      "07": {
+        "name": "System",
+        "duration_min": 30,
+        "elapsed_at_exit_min": 210,
+        "delta": {
+          "cognitive_load": 1.6918060716842618,
+          "fatigue": 1.345836547228238,
+          "shared_understanding": 0.010003580426712233,
+          "cumulative_tokens": 620.3999999999965,
+          "latent_defects": 0.19129045052286353,
+          "known_defects": 1.0073894639465966,
+          "clarification_count": 6.7097447450914345,
+          "correction_count": 1.489634684869623,
+          "redirect_count": 0.741861889624067,
+          "approval_count": 1.3729885309177963
+        },
+        "end_state": {
+          "cognitive_load": 11.666696626585706,
+          "fatigue": 20.119363748393145,
+          "shared_understanding": 82.70859912793988,
+          "cumulative_tokens": 4145.399999999983,
+          "latent_defects": 1.0923336323862483,
+          "known_defects": 7.311541464901157,
+          "clarification_count": 52.2275972550716,
+          "correction_count": 11.12244099086816,
+          "redirect_count": 5.554548120521328,
+          "approval_count": 9.40658976734498
+        }
+      },
+      "08": {
+        "name": "PR",
+        "duration_min": 10,
+        "elapsed_at_exit_min": 220,
+        "delta": {
+          "cognitive_load": -1.6601207936618554,
+          "fatigue": 0.4409916481052143,
+          "shared_understanding": -4.484207194876873,
+          "cumulative_tokens": 150.39999999999964,
+          "latent_defects": -0.13845625107841286,
+          "known_defects": 0.3270672919707085,
+          "clarification_count": 1.929323949272245,
+          "correction_count": 0.5118863894110373,
+          "redirect_count": 0.24266219681486945,
+          "approval_count": 0.4429383290583999
+        },
+        "end_state": {
+          "cognitive_load": 10.00657583292385,
+          "fatigue": 20.56035539649836,
+          "shared_understanding": 78.224391933063,
+          "cumulative_tokens": 4295.799999999983,
+          "latent_defects": 0.9538773813078354,
+          "known_defects": 7.638608756871865,
+          "clarification_count": 54.156921204343845,
+          "correction_count": 11.634327380279197,
+          "redirect_count": 5.797210317336197,
+          "approval_count": 9.84952809640338
+        }
+      },
+      "10": {
+        "name": "Retro",
+        "duration_min": 15,
+        "elapsed_at_exit_min": 235,
+        "delta": {
+          "cognitive_load": 5.867019137382231,
+          "fatigue": 0.6761292929593097,
+          "shared_understanding": -0.5135765061037318,
+          "cumulative_tokens": 253.8000000000011,
+          "latent_defects": 0.07800058287830414,
+          "known_defects": 0.4585254594334556,
+          "clarification_count": 4.399228147193874,
+          "correction_count": 0.7927313843673716,
+          "redirect_count": 0.3898947031122395,
+          "approval_count": 0.6427343781227499
+        },
+        "end_state": {
+          "cognitive_load": 15.873594970306081,
+          "fatigue": 21.23648468945767,
+          "shared_understanding": 77.71081542695927,
+          "cumulative_tokens": 4549.599999999984,
+          "latent_defects": 1.0318779641861395,
+          "known_defects": 8.09713421630532,
+          "clarification_count": 58.55614935153772,
+          "correction_count": 12.427058764646569,
+          "redirect_count": 6.187105020448437,
+          "approval_count": 10.49226247452613
+        }
+      }
+    },
+    "total_minutes": 235
+  },
+  "japanese": {
+    "final": {
+      "cognitive_load": 5.385155877124932,
+      "fatigue": 20.827031226150535,
+      "shared_understanding": 79.37717205818123,
+      "cumulative_tokens": 25337.399999999852,
+      "latent_defects": 1.0201265664771353,
+      "known_defects": 8.047624650599339,
+      "clarification_count": 41.88805835465553,
+      "correction_count": 12.416945982831065,
+      "redirect_count": 5.606227321841233,
+      "approval_count": 10.525114827770107
+    },
+    "per_phase": {
+      "01": {
+        "name": "Req",
+        "duration_min": 15,
+        "elapsed_at_exit_min": 15,
+        "delta": {
+          "cognitive_load": -11.455481210666091,
+          "fatigue": 0.7560575020210454,
+          "shared_understanding": 23.9047206635139,
+          "cumulative_tokens": 1413.45,
+          "latent_defects": 0.9132782814093788,
+          "known_defects": 0.24195734591069842,
+          "clarification_count": 2.44433158499493,
+          "correction_count": 0.9853446640757839,
+          "redirect_count": 0.39500069521783415,
+          "approval_count": 0.5550493998816545
+        },
+        "end_state": {
+          "cognitive_load": 8.544518789333909,
+          "fatigue": 10.756057502021045,
+          "shared_understanding": 73.9047206635139,
+          "cumulative_tokens": 1413.45,
+          "latent_defects": 0.9132782814093788,
+          "known_defects": 0.24195734591069842,
+          "clarification_count": 2.44433158499493,
+          "correction_count": 0.9853446640757839,
+          "redirect_count": 0.39500069521783415,
+          "approval_count": 0.5550493998816545
+        }
+      },
+      "02": {
+        "name": "ADR",
+        "duration_min": 15,
+        "elapsed_at_exit_min": 30,
+        "delta": {
+          "cognitive_load": -4.398496771284126,
+          "fatigue": 0.7044933222855096,
+          "shared_understanding": -2.6160482486741756,
+          "cumulative_tokens": 942.3,
+          "latent_defects": -0.11393470700773223,
+          "known_defects": 0.4115760548510833,
+          "clarification_count": 1.5768213142670033,
+          "correction_count": 0.8894273674954016,
+          "redirect_count": 0.33524104143698336,
+          "approval_count": 0.6230560042332706
+        },
+        "end_state": {
+          "cognitive_load": 4.146022018049782,
+          "fatigue": 11.460550824306555,
+          "shared_understanding": 71.28867241483972,
+          "cumulative_tokens": 2355.75,
+          "latent_defects": 0.7993435744016466,
+          "known_defects": 0.6535334007617817,
+          "clarification_count": 4.021152899261933,
+          "correction_count": 1.8747720315711855,
+          "redirect_count": 0.7302417366548175,
+          "approval_count": 1.178105404114925
+        }
+      },
+      "03": {
+        "name": "Design",
+        "duration_min": 30,
+        "elapsed_at_exit_min": 60,
+        "delta": {
+          "cognitive_load": 5.2324257118378945,
+          "fatigue": 1.4274647850626394,
+          "shared_understanding": 9.622095819465272,
+          "cumulative_tokens": 3140.9999999999945,
+          "latent_defects": 0.5394694806335107,
+          "known_defects": 1.2109921323938293,
+          "clarification_count": 5.708450204158069,
+          "correction_count": 1.6352396185721874,
+          "redirect_count": 0.7134451926508316,
+          "approval_count": 1.3423728779419895
+        },
+        "end_state": {
+          "cognitive_load": 9.378447729887677,
+          "fatigue": 12.888015609369194,
+          "shared_understanding": 80.910768234305,
+          "cumulative_tokens": 5496.7499999999945,
+          "latent_defects": 1.3388130550351574,
+          "known_defects": 1.864525533155611,
+          "clarification_count": 9.729603103420002,
+          "correction_count": 3.510011650143373,
+          "redirect_count": 1.4436869293056491,
+          "approval_count": 2.5204782820569145
+        }
+      },
+      "03a": {
+        "name": "Annot",
+        "duration_min": 10,
+        "elapsed_at_exit_min": 70,
+        "delta": {
+          "cognitive_load": -4.295566090242636,
+          "fatigue": 0.4643207405068175,
+          "shared_understanding": -2.3342363730539972,
+          "cumulative_tokens": 837.6000000000022,
+          "latent_defects": -0.18732901309791705,
+          "known_defects": 0.43130835890973906,
+          "clarification_count": 1.1055391049685728,
+          "correction_count": 0.5331697048078303,
+          "redirect_count": 0.2285270425948236,
+          "approval_count": 0.45296717379845086
+        },
+        "end_state": {
+          "cognitive_load": 5.082881639645041,
+          "fatigue": 13.352336349876012,
+          "shared_understanding": 78.576531861251,
+          "cumulative_tokens": 6334.349999999997,
+          "latent_defects": 1.1514840419372403,
+          "known_defects": 2.29583389206535,
+          "clarification_count": 10.835142208388575,
+          "correction_count": 4.043181354951203,
+          "redirect_count": 1.6722139719004727,
+          "approval_count": 2.9734454558553653
+        }
+      },
+      "04": {
+        "name": "Impl",
+        "duration_min": 60,
+        "elapsed_at_exit_min": 130,
+        "delta": {
+          "cognitive_load": 6.033693622986995,
+          "fatigue": 2.8272692881492,
+          "shared_understanding": 4.629380965548151,
+          "cumulative_tokens": 7538.399999999978,
+          "latent_defects": -0.09364692260706287,
+          "known_defects": 2.347957347469358,
+          "clarification_count": 12.98613884984104,
+          "correction_count": 3.0442716709225497,
+          "redirect_count": 1.4864768494581546,
+          "approval_count": 2.7983288402241464
+        },
+        "end_state": {
+          "cognitive_load": 11.116575262632036,
+          "fatigue": 16.179605638025212,
+          "shared_understanding": 83.20591282679915,
+          "cumulative_tokens": 13872.749999999975,
+          "latent_defects": 1.0578371193301774,
+          "known_defects": 4.643791239534708,
+          "clarification_count": 23.821281058229616,
+          "correction_count": 7.087453025873753,
+          "redirect_count": 3.1586908213586273,
+          "approval_count": 5.771774296079512
+        }
+      },
+      "05": {
+        "name": "Unit",
+        "duration_min": 30,
+        "elapsed_at_exit_min": 160,
+        "delta": {
+          "cognitive_load": -4.344492727909521,
+          "fatigue": 1.3430566298005537,
+          "shared_understanding": -1.2802615299931546,
+          "cumulative_tokens": 3455.0999999999876,
+          "latent_defects": -0.23818101476553055,
+          "known_defects": 0.9411464204144613,
+          "clarification_count": 4.476785436243812,
+          "correction_count": 1.5165360943761552,
+          "redirect_count": 0.6881583334643824,
+          "approval_count": 1.3807897371050295
+        },
+        "end_state": {
+          "cognitive_load": 6.772082534722515,
+          "fatigue": 17.522662267825766,
+          "shared_understanding": 81.925651296806,
+          "cumulative_tokens": 17327.849999999962,
+          "latent_defects": 0.8196561045646469,
+          "known_defects": 5.584937659949169,
+          "clarification_count": 28.298066494473428,
+          "correction_count": 8.603989120249908,
+          "redirect_count": 3.8468491548230097,
+          "approval_count": 7.152564033184541
+        }
+      },
+      "06": {
+        "name": "Integ",
+        "duration_min": 20,
+        "elapsed_at_exit_min": 180,
+        "delta": {
+          "cognitive_load": 3.218544963636515,
+          "fatigue": 0.8952509030752012,
+          "shared_understanding": -0.01762571625755527,
+          "cumulative_tokens": 2303.399999999965,
+          "latent_defects": 0.12220589826145534,
+          "known_defects": 0.5940669025970822,
+          "clarification_count": 3.991316518447558,
+          "correction_count": 1.0111982449573542,
+          "redirect_count": 0.4727325769173141,
+          "approval_count": 0.9123849751670043
+        },
+        "end_state": {
+          "cognitive_load": 9.99062749835903,
+          "fatigue": 18.417913170900967,
+          "shared_understanding": 81.90802558054844,
+          "cumulative_tokens": 19631.249999999927,
+          "latent_defects": 0.9418620028261022,
+          "known_defects": 6.179004562546251,
+          "clarification_count": 32.289383012920986,
+          "correction_count": 9.615187365207262,
+          "redirect_count": 4.319581731740324,
+          "approval_count": 8.064949008351546
+        }
+      },
+      "07": {
+        "name": "System",
+        "duration_min": 30,
+        "elapsed_at_exit_min": 210,
+        "delta": {
+          "cognitive_load": 1.6946552005092403,
+          "fatigue": 1.3519417644188962,
+          "shared_understanding": 0.010110413470783897,
+          "cumulative_tokens": 3455.0999999999476,
+          "latent_defects": 0.20384681965417917,
+          "known_defects": 1.0496263022214594,
+          "clarification_count": 6.720007245073411,
+          "correction_count": 1.5094414388224937,
+          "redirect_count": 0.743290716266408,
+          "approval_count": 1.3619422283330653
+        },
+        "end_state": {
+          "cognitive_load": 11.68528269886827,
+          "fatigue": 19.769854935319863,
+          "shared_understanding": 81.91813599401922,
+          "cumulative_tokens": 23086.349999999875,
+          "latent_defects": 1.1457088224802814,
+          "known_defects": 7.228630864767711,
+          "clarification_count": 39.0093902579944,
+          "correction_count": 11.124628804029756,
+          "redirect_count": 5.062872448006732,
+          "approval_count": 9.426891236684611
+        }
+      },
+      "08": {
+        "name": "PR",
+        "duration_min": 10,
+        "elapsed_at_exit_min": 220,
+        "delta": {
+          "cognitive_load": -7.060112860109831,
+          "fatigue": 0.43024950673144247,
+          "shared_understanding": -2.924514359954813,
+          "cumulative_tokens": 837.599999999984,
+          "latent_defects": -0.15513042119568765,
+          "known_defects": 0.3436604516825019,
+          "clarification_count": 0.9508068814391706,
+          "correction_count": 0.5126118404662314,
+          "redirect_count": 0.2255141745554221,
+          "approval_count": 0.44366324219411624
+        },
+        "end_state": {
+          "cognitive_load": 4.62516983875844,
+          "fatigue": 20.200104442051305,
+          "shared_understanding": 78.99362163406441,
+          "cumulative_tokens": 23923.94999999986,
+          "latent_defects": 0.9905784012845937,
+          "known_defects": 7.572291316450213,
+          "clarification_count": 39.96019713943357,
+          "correction_count": 11.637240644495987,
+          "redirect_count": 5.288386622562154,
+          "approval_count": 9.870554478878727
+        }
+      },
+      "10": {
+        "name": "Retro",
+        "duration_min": 15,
+        "elapsed_at_exit_min": 235,
+        "delta": {
+          "cognitive_load": 0.7599860383664918,
+          "fatigue": 0.6269267840992292,
+          "shared_understanding": 0.3835504241168195,
+          "cumulative_tokens": 1413.4499999999935,
+          "latent_defects": 0.029548165192541553,
+          "known_defects": 0.47533333414912615,
+          "clarification_count": 1.9278612152219594,
+          "correction_count": 0.7797053383350772,
+          "redirect_count": 0.31784069927907943,
+          "approval_count": 0.6545603488913798
+        },
+        "end_state": {
+          "cognitive_load": 5.385155877124932,
+          "fatigue": 20.827031226150535,
+          "shared_understanding": 79.37717205818123,
+          "cumulative_tokens": 25337.399999999852,
+          "latent_defects": 1.0201265664771353,
+          "known_defects": 8.047624650599339,
+          "clarification_count": 41.88805835465553,
+          "correction_count": 12.416945982831065,
+          "redirect_count": 5.606227321841233,
+          "approval_count": 10.525114827770107
+        }
+      }
+    },
+    "total_minutes": 235
+  }
+}

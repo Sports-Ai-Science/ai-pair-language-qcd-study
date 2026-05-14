@@ -1,0 +1,12 @@
+{
+  "name": "scientific-calculator",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Vanilla-JS scientific calculator that runs by double-clicking index.html.",
+  "scripts": {
+    "test": "node --test tests/engine.test.mjs tests/state.test.mjs tests/integration.test.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}

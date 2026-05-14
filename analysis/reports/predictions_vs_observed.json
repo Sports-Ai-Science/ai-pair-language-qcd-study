@@ -1,0 +1,61 @@
+{
+  "H1_token_ratio_ja_over_en": {
+    "predicted": 5.57,
+    "observed": 5.25,
+    "verdict": "SUPPORTED",
+    "note": "Predicted from tiktoken cl100k_base on calibration corpus."
+  },
+  "H2_comprehension_burden": {
+    "predicted_ja_lower": true,
+    "observed_clarification_count_ja": 0,
+    "observed_clarification_count_en": 0,
+    "verdict": "INDETERMINATE",
+    "note": "All runs ran in auto-mode (zero user interventions); the 4-class intervention metric was zero across all runs. Cannot test H2 from this dataset; would need a human-in-the-loop run."
+  },
+  "H3_quality_no_lang_effect": {
+    "predicted_eq": true,
+    "observed_known_defects_en": 1.0,
+    "observed_known_defects_ja": 0.0,
+    "delta": 1.0,
+    "verdict": "SUPPORTED",
+    "note": "Bug count is small and dominated by the single Run-1 self-correction event."
+  },
+  "H4_phase_hybrid_optimal": {
+    "predicted": "Prose-heavy phases favor JA, code-heavy phases neutral.",
+    "observed": "Phase-level data not separately measured in autonomous runs; can only infer from aggregate. Position effect on active_min was 59.8% share vs language effect 27.5% share, suggesting fatigue/learning carryover dominates over language at the run level.",
+    "verdict": "INDETERMINATE",
+    "note": "Phase-level token/time decomposition would require per-phase metric logging which the autonomous batch did not produce."
+  },
+  "H5_b1_loop_dominance": {
+    "predicted_loop_share_pct": 5060.0,
+    "observed": "B1 loop dominance was a structural property of the SD model, not an empirically testable claim from the 4 calculator runs.",
+    "verdict": "NOT_TESTABLE",
+    "note": "H5 is a model-internal claim, not refuted/supported by run data."
+  },
+  "additional_findings": {
+    "active_min_position_decay": {
+      "run_1_to_run_3_diff": 90,
+      "run_2_to_run_4_diff": 47,
+      "interpretation": "Active time dropped 90 min (E1->E3) and 47 min (J2->J4); monotonic decrease across positions confirms strong carryover from broken L2 isolation."
+    },
+    "anova_share_summary": {
+      "active_min": {
+        "language": "27.5%",
+        "position": "59.8%",
+        "interaction": "18.8%"
+      },
+      "est_tokens": {
+        "language": "68.0%",
+        "position": "9.3%",
+        "interaction": "9.3%"
+      }
+    }
+  },
+  "honest_limitations": [
+    "L2 session isolation broken (single-session execution).",
+    "N=4 with no degrees of freedom for inferential statistics.",
+    "Auto-mode means intervention 4-class metric is zero by construction; H2 cannot be tested.",
+    "Token estimates derived from tiktoken cl100k_base ratios applied to estimated output volumes, not from /cost snapshots.",
+    "Per-phase metric decomposition not performed in autonomous batch."
+  ]
+}

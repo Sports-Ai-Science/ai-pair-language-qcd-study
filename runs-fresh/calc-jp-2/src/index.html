@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scientific Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="calc">
+    <header class="header">
+      <h1>Scientific Calculator</h1>
+      <span class="mode-badge" id="mode">DEG</span>
+    </header>
+
+    <div id="display" aria-live="polite">0</div>
+
+    <div class="keys">
+      <button class="fn" data-action="toggle-angle">DEG/RAD</button>
+      <button class="fn" data-action="unary" data-value="sin">sin</button>
+      <button class="fn" data-action="unary" data-value="cos">cos</button>
+      <button class="fn" data-action="unary" data-value="tan">tan</button>
+      <button class="fn" data-action="unary" data-value="log">log</button>
+      <button class="fn" data-action="unary" data-value="ln">ln</button>
+
+      <button class="fn" data-action="unary" data-value="asin">asin</button>
+      <button class="fn" data-action="unary" data-value="acos">acos</button>
+      <button class="fn" data-action="unary" data-value="atan">atan</button>
+      <button class="fn" data-action="unary" data-value="exp">exp</button>
+      <button class="fn" data-action="unary" data-value="sqrt">sqrt</button>
+      <button class="fn" data-action="unary" data-value="sq">x^2</button>
+
+      <button class="mem" data-action="mclear">MC</button>
+      <button class="mem" data-action="mrecall">MR</button>
+      <button class="mem" data-action="mplus">M+</button>
+      <button class="mem" data-action="mminus">M-</button>
+      <button data-action="const" data-value="pi">pi</button>
+      <button data-action="const" data-value="e">e</button>
+
+      <button class="clear" data-action="clear">C</button>
+      <button class="clear" data-action="backspace">DEL</button>
+      <button data-action="input" data-value="(">(</button>
+      <button data-action="input" data-value=")">)</button>
+      <button class="op" data-action="input" data-value="^">^</button>
+      <button class="op" data-action="input" data-value="/">/</button>
+
+      <button data-action="input" data-value="7">7</button>
+      <button data-action="input" data-value="8">8</button>
+      <button data-action="input" data-value="9">9</button>
+      <button class="op" data-action="input" data-value="*">*</button>
+      <button data-action="input" data-value="4">4</button>
+      <button data-action="input" data-value="5">5</button>
+
+      <button data-action="input" data-value="6">6</button>
+      <button class="op" data-action="input" data-value="-">-</button>
+      <button data-action="input" data-value="1">1</button>
+      <button data-action="input" data-value="2">2</button>
+      <button data-action="input" data-value="3">3</button>
+      <button class="op" data-action="input" data-value="+">+</button>
+
+      <button data-action="input" data-value="0">0</button>
+      <button data-action="input" data-value=".">.</button>
+      <button class="eq" data-action="equals">=</button>
+    </div>
+
+    <section class="history">
+      <h2>History</h2>
+      <ol id="history"></ol>
+    </section>
+  </main>
+
+  <script src="engine.js"></script>
+  <script src="state.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>

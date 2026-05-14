@@ -1,0 +1,7 @@
+id,lang,rep,exists,phases_with_timestamps,total_active_min,sc_reviews_approved,sc_reviews_total,src_files,src_bytes,docs_bytes,bug_count_estimate
+calc-en-1,english,1,True,9,10.366666666666667,9,9,5,19009,30294,None
+calc-en-2,english,2,True,9,9.333333333333334,9,9,5,21904,19828,None
+calc-en-3,english,3,True,9,7.833333333333333,9,9,5,18309,16422,None
+calc-jp-1,japanese,1,True,9,9.933333333333334,9,9,5,16880,25084,None
+calc-jp-2,japanese,2,True,9,10.566666666666666,9,9,5,19519,25998,None
+calc-jp-3,japanese,3,True,9,11.883333333333333,9,9,5,15407,37010,None

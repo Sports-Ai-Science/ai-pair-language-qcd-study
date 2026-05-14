@@ -1,0 +1,52 @@
+{
+  "runs": [
+    {
+      "id": "run-1-english",
+      "position": 1,
+      "lang": "english",
+      "ac_pass": 10,
+      "ac_total": 10,
+      "sc_failure_count": 0,
+      "interventions_total": 0,
+      "test_pass_rate": 1.0
+    },
+    {
+      "id": "run-2-japanese",
+      "position": 2,
+      "lang": "japanese",
+      "ac_pass": 10,
+      "ac_total": 10,
+      "est_output_tokens": 10,
+      "in_run_bugs": 2,
+      "sc_failure_count": 0,
+      "interventions_total": 0,
+      "test_pass_rate": 1.0
+    },
+    {
+      "id": "run-3-english",
+      "position": 3,
+      "lang": "english",
+      "active_min": 28,
+      "ac_pass": 10,
+      "ac_total": 10,
+      "est_output_tokens": 12000,
+      "in_run_bugs": 0,
+      "sc_failure_count": 0,
+      "interventions_total": 0,
+      "test_pass_rate": 1.0
+    },
+    {
+      "id": "run-4-japanese",
+      "position": 4,
+      "lang": "japanese",
+      "active_min": 18,
+      "ac_pass": 10,
+      "ac_total": 10,
+      "est_output_tokens": 70000,
+      "in_run_bugs": 0,
+      "sc_failure_count": 0,
+      "interventions_total": 0,
+      "test_pass_rate": 1.0
+    }
+  ]
+}

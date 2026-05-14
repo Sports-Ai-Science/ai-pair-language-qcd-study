@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "Output Language Effect on AI-Assisted Software Engineering: A Pilot Study with Claude Opus 4.7"
+message: "If you use these results, please cite as below."
+type: dataset
+authors:
+  - family-names: Miyoshi
+    given-names: Shuji
+    affiliation: Sports AI Science
+date-released: 2026-05-15
+keywords:
+  - llm
+  - claude
+  - software-engineering
+  - empirical-study
+  - language-effect
+  - ai-assisted-development
+license: MIT
+abstract: >
+  A pilot empirical study (N=3 per language group, parallel sub-agent design)
+  measuring how Claude Code's output language choice (English vs Japanese)
+  affects QCD — Quality, Cost, Delivery — when building the same specified
+  software (a 10-AC scientific calculator). Includes a System Dynamics model
+  used to generate pre-registered hypotheses, the parallel orchestration
+  methodology, complete agent artifacts, and rigorous statistical analysis
+  (Welch's t, Mann-Whitney U, Cliff's δ, bootstrap CI, power analysis).
