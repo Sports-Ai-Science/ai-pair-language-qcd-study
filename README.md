@@ -1,5 +1,7 @@
 # Output Language Effect on AI-Assisted Software Engineering
 
+**English** | [日本語](README.ja.md)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Pilot Study](https://img.shields.io/badge/study-pilot%20N%3D3-blue.svg)](analysis/reports/comparison-report-v2.md)
 [![Model](https://img.shields.io/badge/model-claude--opus--4.7-purple.svg)](https://www.anthropic.com/claude)
